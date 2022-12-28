@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score,confusion_matrix
-sonar_data=pd.read_csv('/content/Copy of sonar data.csv',header=None)
+sonar_data=pd.read_csv('DATA/sonar_data.csv',header=None)
 print(sonar_data.head(),sonar_data.shape,sonar_data.describe(),sonar_data[60].value_counts(),sonar_data.groupby(60).mean(),)
 X=sonar_data.drop(columns=60,axis=1)
 Y=sonar_data[60]
